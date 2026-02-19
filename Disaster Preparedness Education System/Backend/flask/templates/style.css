@@ -1,0 +1,61 @@
+:root {
+    --primary: #FF4757;
+    --secondary: #2ED573;
+    --accent: #1E90FF;
+    --bg: #F1F2F6;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 { font-family: 'Bungee', cursive; color: #2F3542; }
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+}
+
+.hidden { display: none; opacity: 0; transform: translateY(20px); }
+
+.module-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 10px 0 #dfe4ea;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.module-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: var(--secondary);
+    color: white;
+}
+
+/* Mascot Animation */
+#mascot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 100;
+}
+
+#mascot {
+    font-size: 80px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
